@@ -1,0 +1,21 @@
+{% extends 'App1/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+
+<h1 class="mb-5">PRODUCTO</h1>
+
+{% endblock %}
+
+{% block cargar %} {% csrf_token %}
+
+<a class="btn btn-primary" href="{% url 'productoForm' %}">Cargar datos de producto</a>
+
+{% endblock %}
+
+{% block boton_buscar%}
+
+<a class="btn btn-primary" href="{% url 'busquedaProducto' %}">Buscar producto</a>
+
+{% endblock %}

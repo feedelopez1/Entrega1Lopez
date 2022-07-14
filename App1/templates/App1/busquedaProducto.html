@@ -1,0 +1,34 @@
+{% extends 'App1/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+
+<h1 class="mb-5">BUSCAR PRODUCTO</h1>
+
+{% endblock %}
+
+{% block boton_buscar %}
+
+   <body>
+
+      {% if form.errors %}
+         <p> Hay algo mal en el formulario </p>
+      {% endif %}
+
+      {% if error %}
+          
+         <p {{error}}</p>
+
+      {% endif %}
+
+      <form action="{% url 'buscar' %}" method='GET'> 
+         
+         <input type='text'  name='nombre' id='nombre'>
+         
+         <input class="btn btn-primary" type='submit' value='Buscar'>
+
+   </body>
+
+{% endblock %}
+

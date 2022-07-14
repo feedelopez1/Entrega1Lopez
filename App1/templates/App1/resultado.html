@@ -1,0 +1,24 @@
+{% extends 'App1/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+
+<h1 class="mb-5">Resultado de busqueda</h1>
+
+{% endblock %}
+
+{% block resultado %}
+
+   <body>
+
+      {% for porducto in producto%}>
+
+         <p>{{producto.nombre}}</p>
+
+         <br>
+      {% endfor %}
+
+   </body>
+
+{% endblock %}

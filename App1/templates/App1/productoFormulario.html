@@ -1,0 +1,30 @@
+{% extends 'App1/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+
+<h1 class="mb-5">Cargar datos de PRODUCTO</h1>
+
+{% endblock %}
+
+{% block cargar %}
+
+   <body>
+
+      {% if form.errors %}
+         <p> Hay algo mal en el formulario </p>
+      {% endif %}
+
+      <form action="{% url 'productoForm' %}" method='POST'>  {% csrf_token %} 
+         
+         <table>
+            {{ form.as_table }}
+         </table>   
+         
+         <input class="btn btn-primary" type='submit' value='Enviar'>
+
+   </body>
+
+{% endblock %}
+

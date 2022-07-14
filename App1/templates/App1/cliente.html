@@ -1,0 +1,16 @@
+{% extends 'App1/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+
+<h1 class="mb-5">CLIENTE</h1>
+
+{% endblock %}
+
+{% block cargar %} {% csrf_token %}
+
+<a class="btn btn-primary" href="{% url 'clienteForm' %}">Cargar datos de cliente</a>
+
+{% endblock %}
+
